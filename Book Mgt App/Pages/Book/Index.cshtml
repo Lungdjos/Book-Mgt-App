@@ -1,0 +1,35 @@
+﻿@page
+@model Book_Mgt_App.Pages.Book.IndexModel
+@{
+    ViewData["Title"] = "Books";
+}
+<h1>List of Books</h1>
+<hr /> 
+<a class="btn btn-primary float-end" asp-page="Create">Add New Book</a>
+<table class="table table-responsive table-striped table-hover align-middle">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">@Html.DisplayNameFor(model => model.Books[0].Title)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Books[0].Description)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Books[0].Author)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Books[0].ISBN)</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var book in Model.Books)
+        {
+        <tr class="text-center">
+            <td>@Html.DisplayFor(modelItem => book.Title)</td>
+            <td>@Html.DisplayFor(modelItem => book.Description)</td>
+            <td>@Html.DisplayFor(modelItem => book.Author)</td>
+            <td>@Html.DisplayFor(modelItem => book.ISBN)</td>
+            <td>
+                <a href="@Url.Action("Edit", "Book", new { id = book.Id })" class="btn btn-primary">Edit</a>
+                <a href="@Url.Action("Details", "Book", new { id = book.Id })" class="btn btn-info">Details</a>
+                <a href="@Url.Action("Delete", "Book", new { id = book.Id })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+             }
+    </tbody>
+</table>
