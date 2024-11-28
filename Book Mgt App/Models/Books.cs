@@ -6,9 +6,13 @@ namespace Book_Mgt_App.Models
     {
         [Key]
         public int Id { get; set; }
-        public required string Title { get; set; }
-        public required string Description { get; set; }
-        public required string Author { get; set; }
-        public required string ISBN { get; set; }
+        [Required]
+        public string Title { get; set; } = string.Empty;
+        [Required]
+        public string Description { get; set; } = string.Empty;
+        [Required]
+        public string Author { get; set; } = string.Empty;
+        [Required]
+        public string ISBN { get; set; } = string.Empty;
     }
 }
