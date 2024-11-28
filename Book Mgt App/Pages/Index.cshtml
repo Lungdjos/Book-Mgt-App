@@ -1,10 +1,42 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Welcome to the Book Management System";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the Book Management System!</h1>
+    <p class="lead">Your one-stop solution to organize, manage, and explore books.</p>
+    <div class="mt-4">
+        <a asp-page="./Book/Index" class="btn btn-primary btn-lg">Explore Our Collection</a>
+        <a asp-page="./Book/CreateBook" class="btn btn-success btn-lg">Add a New Book</a>
+    </div>
+    <hr class="my-4">
+    <p>Get started by browsing our library or adding a new book to the collection.</p>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Popular Book">
+                <div class="card-body">
+                    <h5 class="card-title">Popular Book of the Week</h5>
+                    <p class="card-text">Discover the top trending book in our library this week! Click to see more details.</p>
+                    <a href="/BookDetails/1" class="btn btn-info">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="New Arrival">
+                <div class="card-body">
+                    <h5 class="card-title">New Arrivals</h5>
+                    <p class="card-text">Check out the latest additions to our book collection. Stay updated with fresh titles!</p>
+                    <a href="/NewArrivals" class="btn btn-info">See New Arrivals</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4">
+    <p class="mt-4">Don't have an account? <a href="/Register">Sign Up</a> today to start managing your books!</p>
 </div>
