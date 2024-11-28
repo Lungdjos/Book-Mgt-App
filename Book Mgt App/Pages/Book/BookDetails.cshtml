@@ -1,0 +1,44 @@
+﻿@page
+@model Book_Mgt_App.Pages.Book.BookDetailsModel
+@{
+    ViewData["Title"] = "Book Details";
+}
+<h1>Book Details Page</h1>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-2">
+            @Html.DisplayNameFor(model => model.Book.Title);
+        </dt>
+        <dd class="col-10">
+            @Html.DisplayFor(model => model.Book.Title);
+        </dd>
+
+        <dt class="col-2">
+            @Html.DisplayNameFor(model => model.Book.Description);
+        </dt>
+        <dd class="col-10">
+            @Html.DisplayFor(model => model.Book.Description);
+        </dd>
+
+        <dt class="col-2">
+            @Html.DisplayNameFor(model => model.Book.Author);
+        </dt>
+        <dd class="col-10">
+            @Html.DisplayFor(model => model.Book.Author);
+        </dd>
+
+        <dt class="col-2">
+            @Html.DisplayNameFor(model => model.Book.ISBN);
+        </dt>
+        <dd class="col-10">
+            @Html.DisplayFor(model => model.Book.ISBN);
+        </dd>
+    </dl>
+</div>
+
+<br />
+<div>
+    <a asp-page="./Index" class="btn btn-danger">Back</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Book.Id" class="btn btn-primary">Edit</a>
+</div>

@@ -24,7 +24,7 @@ namespace Book_Mgt_App.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Book_Mgt_App.Models.Books", b =>
+            modelBuilder.Entity("Book_Mgt_App.Models.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace Book_Mgt_App.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books");
+                    b.ToTable("Book");
                 });
 #pragma warning restore 612, 618
         }

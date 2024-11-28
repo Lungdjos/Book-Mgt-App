@@ -1,7 +1,7 @@
 ﻿@page
 @model Book_Mgt_App.Pages.Book.IndexModel
 @{
-    ViewData["Title"] = "Books";
+    ViewData["Title"] = "Book";
 }
 <h1 class="text-center">List of Books</h1>
 <hr /> 
@@ -27,7 +27,7 @@
             <br />
             <td>
                 <a asp-page="./EditBook" asp-route-id="@book.Id" class="btn btn-primary">Edit</a>
-                <a asp-page="" class="btn btn-info">Details</a>
+                <a asp-page="./BookDetails" asp-route-id="@book.Id" class="btn btn-info">Details</a>
                 <a asp-page="./DeleteBook" asp-route-id="@book.Id" class="btn btn-danger">Delete</a>
             </td>
         </tr>

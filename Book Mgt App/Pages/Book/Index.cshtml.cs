@@ -15,7 +15,7 @@ namespace Book_Mgt_App.Pages.Book
             _context = context;
         }
 
-        public List<Books> Books { get; set; } = new List<Books>(); //List<Books>
+        public List<Books> Books { get; set; } = new List<Books>(); //List<Book>
 
         public async Task OnGetAsync()
         {
